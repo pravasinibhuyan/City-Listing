@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityListing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body onresize="resize()">
+    <!----------------------------header starts here---------------------------->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+
+
+                    <nav class="navigation fixed-nav"  id="navigation">
+                        <div class="citylisting-logo">
+                            <img src="image/logo.png" alt="logo">
+                        </div>
+
+                        <div class="menu-bar">
+                            <i class="fas fa-bars"></i>
+                        </div>
+
+                        <ul class="menu-list" id="menu-list">
+                             <li><a href="#home">Home</a></li>
+                             <li><a href="#about">About</a></li>
+                             <li><a href="#categories-main">Categories</a></li>
+                             <li><a href="#listing">Listing</a></li>
+                             <li class="page" id="page"><a href="#page">Page</a>
+                                <span id="pageplus" class="pageplus">&plus;</span>
+                                <span id="pageminus" class="pageminus">&minus;</span>
+                                <ul class="page-list" id="page-list">
+                                    <li><a href="#blog">Blog</a></li>
+                                    <li><a href="#blog">Blog Details</a></li>
+                                    <li><a href="#">Element</a></li>
+                                    <li><a href="#">Listing Details</a></li>
+                                </ul>
+                             </li>
+                             <li><a href="#contact">Contact</a></li>
+                             <button class="remove-btn"><span class="plus">&plus;</span>add Listing</button>
+                             <li class="show-addlisting"><a href="#"><span class="add-plus">&plus;</span>Add Listing</a></li>
+                             <li><a href="#newsletter"><span class="far fa-user"></span>Sign in or Register</a></li>
+                        </ul>
+
+                    </nav>
+
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!----------------------------header ends here---------------------------->
+
+    <!----------------------------banner starts here---------------------------->
+    <section class="banner banner-overlay" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="banner-text">
+                        <h3>Explore the city</h3>
+                        <h1>Discover Great Places</h1>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12">
+                    <form action="#" class="form-upper">
+
+                        <div class="form-group search-box">
+                           <input type="text" class="form-control question" placeholder="What are you looking for ?">
+                           <input readonly id="categories" type="text" class="form-control" placeholder="All Categories">
+                           <ul id="categories-list" class="categories-list">
+                                <li value="All-Categories" selected>All Categories</li>
+                                <li value="Categories-One"> Categories One</li>
+                                <li value="Categories-Two">Categories Two</li>
+                                <li value="Categories-Three">Categories Three</li>
+                                <li value="Categories-Four">Categories Four</li>
+                            </ul>
+                            <i class="fas fa-chevron-down" id="angle-icon"></i>
+                           <button class="form-control search-btn">Search</button>
+                        </div>
+             
+                    </form>
+                
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!----------------------------banner ends here------------------------------>
+
+    <!----------------------------location starts here------------------------------>
+    <section id="listing" class="location inner">
+        <div class="container">
+            <div class="row inner">
+                <div class="col-lg-12">
+                    <div class="location-heading">
+                      <h4>Most visited places</h4>
+                      <h1>Popular Locations</h1>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-6 col-xs-5 col-xs-offset-1">
+                 <div class="location-box">
+                    <div class="location-img">
+                        <img src="image/location1.png" alt="location-1">
+                    </div>
+                    <div class="location-details">
+                        <h1>New York</h1>
+                        <button class="loc-btn">65 + Location</button>
+                    </div>
+                 </div>
+                </div>
+                <div class="col-lg-4  col-md-4 col-sm-6 col-xs-6 col-xs-5 ">
+                 <div class="location-box">
+                    <div class="location-img">
+                        <img src="image/location2.png" alt="location-1">
+                    </div>
+                    <div class="location-details">
+                        <h1>Paris</h1>
+                        <button class="loc-btn">60 + Location</button>
+                    </div>
+                 </div>
+                </div>
+                <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-5 col-xs-offset-1">
+                 <div class="location-box">
+                    <div class="location-img">
+                        <img src="image/location3.png" alt="location-1">
+                    </div>
+                    <div class="location-details">
+                        <h1>Rome</h1>
+                        <button class="loc-btn">50 + Location</button>
+                    </div>
+                 </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6  col-xs-5">
+                 <div class="location-box">
+                    <div class="location-img">
+                        <img src="image/location4.png" alt="location-1">
+                    </div>
+                    <div class="location-details">
+                        <h1>Italy</h1>
+                        <button class="loc-btn">28 + Location</button>
+                    </div>
+                 </div>
+                </div>
+                <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-0  col-xs-5 col-xs-offset-1">
+                 <div class="location-box">
+                    <div class="location-img">
+                        <img src="image/location5.png" alt="location-1">
+                    </div>
+                    <div class="location-details">
+                        <h1>Nepal</h1>
+                        <button class="loc-btn">99 + Location</button>
+                    </div>
+                 </div>
+                </div>
+                <div class="col-lg-4  col-md-4 col-sm-6 col-xs-5">
+                 <div class="location-box">
+                    <div class="location-img">
+                        <img src="image/location6.png" alt="location-1">
+                    </div>
+                    <div class="location-details">
+                        <h1>Indonesia</h1>
+                        <button class="loc-btn">78 + Location</button>
+                    </div>
+                 </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="view-all-btn">
+                        <button class="view-all-places change">VIEW ALL PLACES</button>
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------------------location ends here-------------------------------->
+
+    <!----------------------------services starts here-------------------------------->
+    <section class="services" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                     <div class="service-text">
+                        <h3>Easy to explore</h3>
+                        <h1>How It Works</h1>
+                     </div>
+                </div>
+            <div class="row center-service">
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="service-plan">
+                    <div class="rotate-icon">
+                        <span class="flaticon-list"></span>
+                    </div>
+                    <div class="service-details">
+                        <h1>1. Choose a Category</h1>
+                        <p>incidid labore lore magna aliqua uisipsum suspendis loris.</p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-lg-1 col-md-1 col-sm-0">
+                    <div class="arch-img">
+                        <img src="image/serices1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="service-plan">
+                    <div class="rotate-icon">
+                            <span class="flaticon-list"></span>
+                    </div>
+                    <div class="service-details">
+                        <h1>2. what you want</h1>
+                        <p>incidid labore lore magna aliqua uisipsum suspendis loris.</p>
+                    </div>
+                 </div>
+                </div>
+
+                <div class="col-lg-1 col-md-1 col-sm-0">
+                    <div class="arch-img">
+                        <img src="image/serices2.png" alt="">
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-3 ">
+                <div class="service-plan">
+                    <div class="rotate-icon">
+                        <span class="flaticon-list"></span>
+                    </div>
+                    <div class="service-details">
+                        <h1>3. Go out & Explore</h1>
+                        <p>incidid labore lore magna aliqua uisipsum suspendis loris.</p>
+                    </div>
+                </div>
+                </div>
+
+            </div> <!--center service-->
+            </div>
+        </div>
+    </section>
+    <!----------------------------services ends here---------------------------------->
+
+    <!----------------------------categories starts here---------------------------------->
+    <section  id="categories-main" class="categories inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="categories-text">
+                        <h3>We are offering for you</h3>
+                        <h1>Featured Categories</h1>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-5 col-xs-offset-1">
+                    <div class="categories-card">
+                        <span class="flaticon-bed"></span>
+                        <h2>Living Hotel</h2>
+                        <p>Must explain your how this keind denoun pleasure</p>
+                        <a href="#">View Details</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-5">
+                    <div class="categories-card">
+                        <span class="flaticon-drink"></span>
+                        <h2>Night Life</h2>
+                        <p>Must explain your how this keind denoun pleasure</p>
+                        <a href="#">View Details</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-5 col-xs-offset-1">
+                    <div class="categories-card">
+                        <span class="flaticon-home"></span>
+                        <h2>Culture Place</h2>
+                        <p>Must explain your how this keind denoun pleasure</p>
+                        <a href="#">View Details</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-5">
+                    <div class="categories-card">
+                        <span class="flaticon-food"></span>
+                        <h2>Restaurant</h2>
+                        <p>Must explain your how this keind denoun pleasure</p>
+                        <a href="#">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------------------categories ends here------------------------------------>
+
+    <!----------------------------visit-site starts here---------------------------------->
+    <section class="visit-site">
+        <div class="bg-holder">
+
+        </div><!--bg-holder-->   
+        <div class="container">
+           <div class="row">
+            <div class="col-lg-8 col-lg-offset-4 col-md-8 col-md-offset-4 col-sm-12 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+                <div class="visit-heading">
+                    <h3>We are offering for you</h3>
+                    <h1>Every Month, Millions of People visit this site We’ve Built.</h1>
+                    <p>Unlike what its name implies, dry cleaning is not actually a 'dry' process. 
+                       Clothes are soaked in a different solvent.</p>
+                
+                <div class="row inside-row">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                        <div class="visit-icon">
+                            <span class="flaticon-travel"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                        <div class="visit-caption">
+                            <h1>Great places in the world</h1>
+                            <p>Unlike what its name implies, dry cleaning is not actu process. Clothes soaked differentent.</p>
+                        </div>
+                    </div>
+               </div><!--inside-row-->
+               <div class="row inside-row">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                        <div class="visit-icon">
+                            <span class="flaticon-work"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                        <div class="visit-caption">
+                            <h1>Biggest category listing</h1>
+                            <p>Unlike what its name implies, dry cleaning is not actu process. Clothes soaked differentent.</p>
+                        </div>
+                    </div>
+               </div><!--inside-row-->
+             </div><!--visit-heading-->
+            </div><!--col-lg-8-->
+           </div>
+        </div>
+      
+    </section>
+    <!----------------------------visit-site ends here------------------------------------>
+
+    <!----------------------------testimonial starts here------------------------------------>
+    <section class="testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="testimonial-heading">
+                        <h3>Our client testimonials</h3>
+                        <h1>What our client say</h1>
+                    </div>
+                </div>
+            </div>
+           
+            <div id="myCarousel"  class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="center-item">
+                            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                               dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra 
+                               maecenas accumsan lacus vel facilisis por incididunt ut labore et dolore mas. 
+                            </p>
+                            <div class="client-details">
+                                <div class="client-pic">
+                                    <img src="image/Homepage_testi.png" alt="client-pic">
+                                </div>
+                                <div class="client-text">
+                                    <h1>Oliva Jems</h1>
+                                    <h4>UIX Designer</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="center-item">
+                            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                               dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra 
+                               maecenas accumsan lacus vel facilisis por incididunt ut labore et dolore mas. 
+                            </p>
+                            <div class="client-details">
+                                <div class="client-pic">
+                                    <img src="image/Homepage_testi.png" alt="client-pic">
+                                </div>
+                                <div class="client-text">
+                                    <h1>Oliva Jems</h1>
+                                    <h4>UIX Designer</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="center-item">
+                            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                               dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra 
+                               maecenas accumsan lacus vel facilisis por incididunt ut labore et dolore mas. 
+                            </p>
+                            <div class="client-details">
+                                <div class="client-pic">
+                                    <img src="image/Homepage_testi.png" alt="client-pic">
+                                </div>
+                                <div class="client-text">
+                                    <h1>Oliva Jems</h1>
+                                    <h4>UIX Designer</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="#myCarousel" class="left carousel-control" data-slide="prev">
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+                <a href="#myCarousel" class="right carousel-control" data-slide="next">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!----------------------------testimonial ends here-------------------------------------->
+
+    <!----------------------------newsletter starts here-------------------------------------->
+    <section class="newsletter inner" id="newsletter">
+        <div class="container">
+            <div class="row row-margin-top">
+                <div class="col-lg-12">
+                    <div class="newsletter-heading">
+                        <h3>Subscribe out newslatter</h3>
+                        <h1>Subscribe For Newsletter</h1>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12">
+                    <form action="#" class="form-upper">
+                        <div class="form-group search-box">
+                           <input type="text" class="form-control question" placeholder="What are you looking for ?">
+                           <button class="form-control send-btn">Send Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------------------newsletter ends here---------------------------------------->
+
+
+    <!----------------------------blog starte here---------------------------------------->
+    <section id="blog" class="blog inner-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="blog-heading">
+                        <h3>Our blog</h3>
+                        <h1>News and tips</h1>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img src="image/home_blog1.png" alt="">
+                        </div>
+                        <div class="blog-details">
+                            <h6>HEALTH & CARE</h6>
+                            <h2>The Best SPA Salons For Your Relaxation</h2>
+                            <p>October 6, 2020by Steve</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img src="image/home_blog2.png" alt="">
+                        </div>
+                        <div class="blog-details">
+                            <h6>HEALTH & CARE</h6>
+                            <h2>The Best SPA Salons For Your Relaxation</h2>
+                            <p>October 6, 2020by Steve</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img src="image/home_blog3.png" alt="">
+                        </div>
+                        <div class="blog-details">
+                            <h6>HEALTH & CARE</h6>
+                            <h2>The Best SPA Salons For Your Relaxation</h2>
+                            <p>October 6, 2020by Steve</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!----------------------------blog ends here------------------------------------------>
+
+    <!----------------------------footer starts here------------------------------------------>
+    <footer class="inner">
+        <div class="container">
+            <div class="row row-custom">
+                <div class="col-lg-3 col-md-3 col-lg-12">
+                    <div class="citylisting-logo">
+                        <img src="image/logo.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-12">
+                    <div class="extra-links">
+                        <h4>Quick Link</h4>
+                        <ul>
+                            <li>Home</li>
+                            <li>Listing</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-12">
+                    <div class="extra-links">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li>Reasonable Hotel</li>
+                            <li>Popular Restaurant</li>
+                            <li>Easy Shopping</li>
+                            <li>Night Life</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                    <div class="download-app">
+                        <h4>Download App</h4>
+                        <img src="image/app-logo.png" alt="">
+                        <img src="image/app-logo2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row reverse-column">
+                    <div class="col-lg-8 col-md-8" id="contact">
+                        <div class="footer-para">
+                            <p>Copyright ©2023 All rights reserved | This template is made with <span class="fas fa-heart"></span> by <span>Pravasini</span></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-globe"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                         </div>
+                    </div>
+            </div>
+        </div>
+    </footer>
+    <!----------------------------footer ends here-------------------------------------------->
+
+       <span onclick="topFunction()"  id="top-button" class="fas fa-level-up-alt"></span>   
+
+
+
+
+
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
